@@ -1,4 +1,4 @@
-# Proyecto sostenible con React, Typescipt y bootstrap
+# Proyecto sostenible con React, TypeScript y bootstrap
 
 ----
 
