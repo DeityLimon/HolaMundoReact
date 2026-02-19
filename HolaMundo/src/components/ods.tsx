@@ -22,18 +22,34 @@ function ods(){
             id:1,
             odsFav:listaODS.ods1,
             estado:'Rechazado'
+        },
+        {
+            id:2,
+            odsFav:listaODS.ods2,
+            estado:'Ejecucion'
+        },
+        {
+            id:3,
+            odsFav:listaODS.ods3,
+            estado:'Ejecucion'
+        },
+        {
+            id:4,
+            odsFav:listaODS.ods4,
+            estado:'Ejecucion'
         }
     ];
 
 
     let odsFav = listaODS.ods1;
 
-    return(
-        <div>
-            <h1>---------------ODS---------------</h1>
-            <h2>Mi ods favorito es el siguiente: {odsFav}</h2>
-        </div>
-    )
+    function filtrarProyectosClimaticos(ods : InterfazSostenible[]):InterfazSostenible[]{
+        return ods.filter(o => o.estado === 'Ejecucion');
+    }
+
+    const resultadoJSON = filtrarProyectosClimaticos(odsAlumnos);
+
+    return( <h1>{JSON.stringify(resultadoJSON, null, 3)}</h1>)
 }
 
 export default ods
